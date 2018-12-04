@@ -1,15 +1,19 @@
 #include "lists.h"
 
+/**
+ * check_cycle - check for cycle in linked list
+ * @list: pointer to head of list
+ * Return: cycle status
+ */
 int check_cycle(listint_t *list)
 {
 	if (list == NULL)
 		return (0);
-	while (list)
+	while (list->next > list)
 	{
-		if (list->next > list)
-			return (1);
-		else
-			list = list->next;
+		if (list == NULL)
+			return (0);
+		list = list->next;
 	}
-	return (0);
+	return (1);
 }
