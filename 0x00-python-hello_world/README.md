@@ -5,7 +5,7 @@
 This project in higher level programming is about:
 * How to use strings
 * What are indexing and slicing in Python
-* how to check your code with PEP 8
+* How to check your code with PEP8
 * How to use the Python interpreter
 
 ---
