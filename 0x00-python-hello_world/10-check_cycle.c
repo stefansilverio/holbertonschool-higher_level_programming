@@ -1,20 +1,28 @@
 #include "lists.h"
 
 /**
- * check_cycle - check for cycle in linked list
+ * check_cycle - check for cycle
  * @list: pointer to head of list
  * Return: cycle status
  */
 int check_cycle(listint_t *list)
 {
+	listint_t *curr = list;
+	listint_t *next = list;
+
 	if (list == NULL)
 		return (0);
-	while ((list->next != NULL) && (list->next < list))
+	while (1)
 	{
-		list = list->next;
+		curr = curr->next;
+		if (curr->next != NULL)
+			curr = curr->next->next;
+		else
+			return (0);
+		if (curr == NULL || next == NULL)
+			return (0);
+		if (curr == next)
+			return (1);
 	}
-	if (list->next > list)
-		return (1);
-
-	return (0);
+	return (1);
 }
