@@ -2,7 +2,7 @@
 ---
 ## Description
 
-This project in the System engineering & DevOps series is about:
+This project in higher level programming is about:
 * How to import functions from another file
 * How to use imported functions
 * How to create a module
