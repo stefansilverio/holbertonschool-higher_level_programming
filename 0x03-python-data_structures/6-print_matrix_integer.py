@@ -4,11 +4,13 @@ def print_matrix_integer(matrix=[[]]):
     count = 0
     for i in matrix:
         for elem in matrix[pos]:
-            if count == 2:
-                print("{:d}".format(elem), end='')
+            length = len(matrix[pos]) - 1
+            if count < length:
+                print("{:d}".format(elem), end=' ')
+                count += 1
                 continue
-            count += 1
-            print("{:d}".format(elem), end=' ')
+            print("{:d}".format(elem), end='')
+            continue
         pos += 1
         count = 0
         print()
