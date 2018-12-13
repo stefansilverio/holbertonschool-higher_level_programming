@@ -8,7 +8,10 @@ if __name__ == "__main__":
         exit(1)
     for i in list:
         if i == sys.argv[2]:
-            print("{} {} {} = {}".format(int(sys.argv[1]), sys.argv[2], int(sys.argv[3]), int(sys.argv[1]) + int(sys.argv[3])))
+            print("{} {} {} = {}"
+                  .format(int(sys.argv[1]),
+                          sys.argv[2], int(sys.argv[3]),
+                          int(sys.argv[1]) + int(sys.argv[3])))
             exit(0)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
