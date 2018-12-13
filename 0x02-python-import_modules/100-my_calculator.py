@@ -8,7 +8,7 @@ if __name__ == "__main__":
         exit(1)
     for i in list:
         if i == sys.argv[2]:
-            print("{} {} {} = {}"
+            print("{:d} {} {:d} = {:d}"
                   .format(int(sys.argv[1]),
                           sys.argv[2], int(sys.argv[3]),
                           int(sys.argv[1]) + int(sys.argv[3])))
