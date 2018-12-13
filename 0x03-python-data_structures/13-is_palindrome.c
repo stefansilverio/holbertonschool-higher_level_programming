@@ -21,16 +21,12 @@ int helper(listint_t *curr, listint_t **start)
 	{
 		if (!helper(curr->next, start))
 			return (0);
-		printf("1: here:%d\n", curr->n);
-		printf("1: there:%d\n", (*start)->n);
 		if (curr->n != (*start)->n)
 			return (0);
 		*start = (*start)->next;
 	}
 	else
 	{
-		printf("2:here:%d\n", curr->n);
-		printf("2:there%d\n", (*start)->n);
 		if ((*start)->n != curr->n)
 			return (0);
 		*start = (*start)->next;
