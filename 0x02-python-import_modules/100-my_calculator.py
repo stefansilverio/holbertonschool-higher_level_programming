@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-import calculator_1
+from calculator_1 import add, sub, div, mul
 import sys
 if __name__ == "__main__":
-    list = ['+', '-', '/', '%']
-    if len(sys.argv) != 4:
+    a_dict = {'+' : add, '-' : sub, '/' : div, '*' : mul}
+
+    x = int(sys.argv[1])
+    y = int(sys.argv[3])
+
+    if len(sys.argv) - 1 != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        exit(1)
-    for i in list:
-        if i == sys.argv[2]:
-            print("{:d} {} {:d} = {:d}"
-                  .format(int(sys.argv[1]),
-                          sys.argv[2], int(sys.argv[3]),
-                          int(sys.argv[1]) + int(sys.argv[3])))
-            exit(0)
-    else:
+
+    elif a_dict.get(sys.argv[2], 0) == 0:
         print("Unknown operator. Available operators: +, -, * and /")
-        exit(1)
+
+    else:
+        print("{} {} {} = {}".format(x, sys.argv[2], y, a_dict[sys.argv[2]](x, y)))
