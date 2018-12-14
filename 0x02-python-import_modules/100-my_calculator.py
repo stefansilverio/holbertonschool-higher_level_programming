@@ -2,7 +2,7 @@
 from calculator_1 import add, sub, div, mul
 import sys
 if __name__ == "__main__":
-    a_dict = {'+' : add, '-' : sub, '/' : div, '*' : mul}
+    a_dict = {'+': add, '-': sub, '/': div, '*': mul}
 
     x = int(sys.argv[1])
     y = int(sys.argv[3])
@@ -14,4 +14,5 @@ if __name__ == "__main__":
         print("Unknown operator. Available operators: +, -, * and /")
 
     else:
-        print("{} {} {} = {}".format(x, sys.argv[2], y, a_dict[sys.argv[2]](x, y)))
+        print("{} {} {} = {}".format(x, sys.argv[2], y,
+                                     a_dict[sys.argv[2]](x, y)))
