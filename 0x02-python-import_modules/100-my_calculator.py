@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-from calculator_1 import add, sub, div, mul
-import sys
 if __name__ == "__main__":
+    from calculator_1 import add, sub, div, mul
+    import sys
     a_dict = {'+': add, '-': sub, '/': div, '*': mul}
 
     x = int(sys.argv[1])
