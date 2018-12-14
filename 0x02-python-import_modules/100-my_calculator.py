@@ -18,3 +18,4 @@ if __name__ == "__main__":
     else:
         print("{} {} {} = {}".format(x, sys.argv[2], y,
                                      a_dict[sys.argv[2]](x, y)))
+        sys.exit(0)
