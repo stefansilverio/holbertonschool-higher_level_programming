@@ -9,9 +9,11 @@ if __name__ == "__main__":
 
     if len(sys.argv) - 1 != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        sys.exit(1)
 
     elif a_dict.get(sys.argv[2], 0) == 0:
         print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
 
     else:
         print("{} {} {} = {}".format(x, sys.argv[2], y,
