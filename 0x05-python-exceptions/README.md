@@ -1,4 +1,4 @@
-B# 0x05. Python - Exceptions
+# 0x05. Python - Exceptions
 ---
 ## Description
 This project in higher-level programming is about:
