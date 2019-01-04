@@ -50,8 +50,6 @@ class Square:
                 idx += 1
             print()
             count += 1
-        if self.__size == 0:
-            print()
 
     def area(self):
         return self.__size**2
