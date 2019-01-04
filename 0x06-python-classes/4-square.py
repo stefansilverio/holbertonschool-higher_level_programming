@@ -1,7 +1,16 @@
 #!/usr/bin/python3
 
+
 class Square:
     def __init__(self, size=0):
+        """
+        Args:
+            param1: self.
+            param2: size.
+
+        Returns:
+            Returns area
+        """
         if isinstance(size, int) is not True:
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -12,12 +21,14 @@ class Square:
     @property
     def size(self):
         return self.__size
+
     @size.setter
     def size(self, value):
         if isinstance(self.__size, int) is not True:
             raise TypeError("size must be an integer")
         else:
             self.__size = value
+
     def area(self):
         if isinstance(self.__size, int) is not True:
             raise TypeError("size must be an integer")
