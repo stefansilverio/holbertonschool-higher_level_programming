@@ -36,6 +36,9 @@ class Square:
         count = idx = 0
         lines = self.__position[1]
         spaces = self.__position[0]
+        if self.__size == 0:
+            print()
+            return
         while lines > 0:
             print('')
             lines -= 1
