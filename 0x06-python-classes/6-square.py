@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 class Square:
     def __init__(self, size=0, position=(0, 0)):
         if len(position) == 2 and isinstance(position, tuple):
