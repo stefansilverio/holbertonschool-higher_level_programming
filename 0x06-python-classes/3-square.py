@@ -1,7 +1,17 @@
 #!/usr/bin/python3
 
+
 class Square:
     def __init__(self, size=0):
+        """Find area of square
+
+        Args:
+            param1: first parameter
+            param2: The second parameter
+
+        Returns:
+            Return area
+        """
         if isinstance(size, int) is not True:
             raise TypeError("size must be an integer")
         elif size < 0:
