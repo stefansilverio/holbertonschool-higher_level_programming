@@ -1,0 +1,27 @@
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+>>> say_my_name(None, None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("bob", 10)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name(None, )
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("bob", ) #doctest: +NORMALIZE_WHITESPACE
+My name is bob
+
+>>> say_my_name(10, )
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("bob", 10)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name("bob", "smith")
+My name is bob smith

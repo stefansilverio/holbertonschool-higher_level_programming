@@ -1,0 +1,27 @@
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+>>> text_indentation(5)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+
+>>> text_indentation(5.0)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+
+>>> text_indentation("the? fast. cat:") #doctest: +REPORT_NDIFF
+the?
+<BLANKLINE>
+fast.
+<BLANKLINE>
+cat:
+<BLANKLINE>
+
+>>> text_indentation("    the? fast.   ")
+the?
+<BLANKLINE>
+fast.
+<BLANKLINE>
+
+>>> text_indentation("    ")
