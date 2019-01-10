@@ -1,0 +1,49 @@
+>>> Rectangle = __import__('1-rectangle').Rectangle
+
+
+>>> A = Rectangle(4, 5)
+
+>>> A.area()
+20
+
+>>> A = Rectangle(4, 0)
+
+>>> A.area()
+0
+
+>>> Rectangle(None)
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+>>> A = Rectangle(width=2, height=4)
+
+>>> A.width
+2
+>>> A.height
+4
+
+>>> Rectangle(2, "4")
+Traceback (most recent call last):
+TypeError: height must be an integer
+
+>>> a = Rectangle(width=4)
+
+>>> a.width
+4
+
+>>> a = Rectangle(height=4)
+
+>>> a.height
+4
+
+>>> Rectangle(-2, 4)
+Traceback (most recent call last):
+ValueError: width must be >= 0
+
+>>> Rectangle(2.0, 4)
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+>>> Rectangle(2, 4.0)
+Traceback (most recent call last):
+TypeError: height must be an integer
