@@ -20,6 +20,10 @@ TypeError: div must be a number
 >>> matrix_divided(matrix, 2)
 [[0.5, 1.0, 1.5], [2.0, 2.65, 3.0]]
 
+>>> matrix_divided(matrix, 0.0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
 >>> matrix_divided(matrix, 0)
 Traceback (most recent call last):
 ZeroDivisionError: division by zero
@@ -50,4 +54,3 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>> matrix_divided(matrix_no_list, 2)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
-
