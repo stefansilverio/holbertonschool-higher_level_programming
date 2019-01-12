@@ -5,6 +5,14 @@
 ...    [4.0, 5.3, 6]
 ... ]
 
+>>> matrix_divided()
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+>>> matrix_divided(matrix)
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
 >>> matrix_divided(matrix, "2")
 Traceback (most recent call last):
 TypeError: div must be a number
@@ -42,3 +50,4 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>> matrix_divided(matrix_no_list, 2)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
