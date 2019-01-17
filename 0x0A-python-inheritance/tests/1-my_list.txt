@@ -1,0 +1,37 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> a = MyList()
+>>> a.append(1)
+>>> a.append(2)
+>>> print(a)
+[1, 2]
+
+>>> a = MyList()
+>>> a.append(1)
+>>> a.append(2)
+>>> a.pop()
+2
+
+>>> a = MyList()
+>>> a.append(2)
+>>> a.append(-1)
+>>> print(a)
+[2, -1]
+
+>>> a = MyList()
+>>> a.append(2)
+>>> a.append("cat")
+>>> print(a)
+[2, 'cat']
+
+>>> a = MyList()
+>>> a.append(2)
+>>> a.append(float('inf'))
+>>> print(a)
+[2, inf]
+
+>>> a = MyList()
+>>> a.append(2)
+>>> a.append(float('-inf'))
+>>> print(a)
+[2, -inf]

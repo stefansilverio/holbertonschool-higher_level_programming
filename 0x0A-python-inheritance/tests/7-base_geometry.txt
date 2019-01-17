@@ -1,0 +1,39 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("stef", "10")
+Traceback (most recent call last):
+TypeError: stef must be an integer
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("stef", 10)
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("stef", 0)
+Traceback (most recent call last):
+ValueError: stef must be greater than 0
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("stef")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> a = BaseGeometry()
+>>> a.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> a = BaseGeometry()
+>>> a.integer_validator(None, None)
+Traceback (most recent call last):
+TypeError: None must be an integer
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("stef", -3)
+Traceback (most recent call last):
+ValueError: stef must be greater than 0
+
+>>> a = BaseGeometry()
+>>> a.area(None)
+Traceback (most recent call last):
+TypeError: area() takes 1 positional argument but 2 were given
