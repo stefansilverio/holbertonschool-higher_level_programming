@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """
-read text file
-prints to stdout
-Returns: None
+read txt file
+print to stdout
+Return: None
 """
 
 
 def read_file(filename=""):
     """
-    prints to stdout
+    print to stdout
     """
     with open(filename, "r") as f:
-        print(f.read(), end="")
+        print(f.read(0), end="")
