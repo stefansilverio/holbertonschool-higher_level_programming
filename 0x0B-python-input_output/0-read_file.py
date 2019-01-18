@@ -11,5 +11,4 @@ def read_file(filename=""):
     prints to stdout
     """
     with open(filename) as f:
-        for line in f:
-            print(line, end="")
+        print(f.read())
