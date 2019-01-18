@@ -11,4 +11,4 @@ def read_file(filename=""):
     prints to stdout
     """
     with open(filename, "r") as f:
-        print(f.read())
+        print(f.read(), end="")
