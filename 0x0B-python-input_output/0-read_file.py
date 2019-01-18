@@ -10,5 +10,5 @@ def read_file(filename=""):
     """
     prints to stdout
     """
-    with open(filename) as f:
+    with open(filename, "r") as f:
         print(f.read())
