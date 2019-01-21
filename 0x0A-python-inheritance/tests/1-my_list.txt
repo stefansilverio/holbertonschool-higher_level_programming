@@ -45,8 +45,12 @@ None
 >>> a = MyList()
 >>> a.append(2)
 >>> a.append(-1)
+>>> print(a)
+[2, -1]
 >>> a.print_sorted()
 [-1, 2]
+>>> print(a)
+[2, -1]
 
 >>> a = MyList()
 >>> a.append(2)
