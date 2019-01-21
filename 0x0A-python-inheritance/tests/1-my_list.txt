@@ -3,8 +3,31 @@
 >>> a = MyList()
 >>> a.append(1)
 >>> a.append(2)
->>> print(a)
+>>> a.print_sorted()
 [1, 2]
+
+>>> a = MyList()
+>>> a.append(1)
+>>> a.extend([2, 3])
+>>> a.print_sorted()
+[1, 2, 3]
+
+>>> a = MyList()
+>>> a.append(3)
+>>> a.extend([2, 1])
+>>> a.print_sorted()
+[1, 2, 3]
+
+
+>>> a = MyList()
+>>> a.append(-3)
+>>> a.extend([-2, -1])
+>>> a.print_sorted()
+[-3, -2, -1]
+
+>>> a = MyList()
+>>> a.print_sorted()
+[]
 
 >>> a = MyList()
 >>> a.append(1)
@@ -15,23 +38,17 @@
 >>> a = MyList()
 >>> a.append(2)
 >>> a.append(-1)
->>> print(a)
-[2, -1]
-
->>> a = MyList()
->>> a.append(2)
->>> a.append("cat")
->>> print(a)
-[2, 'cat']
+>>> a.print_sorted()
+[-1, 2]
 
 >>> a = MyList()
 >>> a.append(2)
 >>> a.append(float('inf'))
->>> print(a)
+>>> a.print_sorted()
 [2, inf]
 
 >>> a = MyList()
 >>> a.append(2)
 >>> a.append(float('-inf'))
->>> print(a)
-[2, -inf]
+>>> a.print_sorted()
+[-inf, 2]
