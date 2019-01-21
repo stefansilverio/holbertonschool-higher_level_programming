@@ -37,7 +37,7 @@ class Student:
         """
         re-initialize data
         """
-        if (json == False):
+        if (bool(json) is False):
             pass
         else:
             self = json
