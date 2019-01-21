@@ -15,7 +15,7 @@ def pascal_triangle(n):
     num = 11
     ex = 0
 
-    if (n =< 0):
+    if (n <= 0):
         return big_list
 
     for i in range(n):
