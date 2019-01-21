@@ -37,5 +37,4 @@ class Student:
         """
         re-initialize data
         """
-        self.__dict__ = {k: v for k, v in json.items() if k
-                         in self.__dict__.keys()}
+        self = json
