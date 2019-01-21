@@ -17,6 +17,8 @@
 >>> a.extend([2, 3])
 >>> b = a.print_sorted()
 [1, 2, 3]
+>>> print(b)
+None
 
 >>> a = MyList()
 >>> a.append(3)
