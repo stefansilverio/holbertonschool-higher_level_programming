@@ -13,11 +13,16 @@
 [1, 2, 3]
 
 >>> a = MyList()
->>> a.append(3)
->>> a.extend([2, 1])
->>> a.print_sorted()
+>>> a.append(1)
+>>> a.extend([2, 3])
+>>> b = a.print_sorted()
 [1, 2, 3]
 
+>>> a = MyList()
+>>> a.append(3)
+>>> a.extend([2, 1])
+>>> print(a)
+[3, 2, 1]
 
 >>> a = MyList()
 >>> a.append(-3)
