@@ -14,6 +14,10 @@ def pascal_triangle(n):
     big_list = []
     num = 11
     ex = 0
+
+    if (n =< 0):
+        return big_list
+
     for i in range(n):
         result = 11**ex
         string = str(result)
