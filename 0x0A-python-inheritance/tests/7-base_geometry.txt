@@ -6,7 +6,14 @@ Traceback (most recent call last):
 TypeError: stef must be an integer
 
 >>> a = BaseGeometry()
->>> a.integer_validator("stef", 10)
+>>> a.integer_validator("stef", "10")
+Traceback (most recent call last):
+TypeError: stef must be an integer
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("stef", "10")
+Traceback (most recent call last):
+TypeError: stef must be an integer
 
 >>> a = BaseGeometry()
 >>> a.integer_validator("stef", 0)
@@ -34,6 +41,25 @@ Traceback (most recent call last):
 ValueError: stef must be greater than 0
 
 >>> a = BaseGeometry()
->>> a.area(None)
+>>> a.integer_validator("age", (4,))
 Traceback (most recent call last):
-TypeError: area() takes 1 positional argument but 2 were given
+TypeError: age must be an integer
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("age", [4])
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("age", True)
+Traceback (most recent call last)
+TypeError: age must be an integer
+
+>>> a = BaseGeometry()
+>>> a.integer_validator("age", (3, 4))
+Traceback (most recent call last)
+TypeError: age must be an integer
+
+>>> a = BaseGeometry()
+>>> a.area()
+area() is not implemented
