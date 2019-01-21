@@ -6,12 +6,10 @@ Traceback (most recent call last):
 TypeError: stef must be an integer
 
 >>> a = BaseGeometry()
->>> a.integer_validator("stef", "10")
-Traceback (most recent call last):
-TypeError: stef must be an integer
+>>> a.integer_validator("stef", 10)
 
 >>> a = BaseGeometry()
->>> a.integer_validator("stef", "10")
+>>> a.integer_validator("stef", {2, 3})
 Traceback (most recent call last):
 TypeError: stef must be an integer
 
