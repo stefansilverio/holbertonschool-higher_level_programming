@@ -52,14 +52,15 @@ TypeError: age must be an integer
 
 >>> a = BaseGeometry()
 >>> a.integer_validator("age", True)
-Traceback (most recent call last)
+Traceback (most recent call last):
 TypeError: age must be an integer
 
 >>> a = BaseGeometry()
 >>> a.integer_validator("age", (3, 4))
-Traceback (most recent call last)
+Traceback (most recent call last):
 TypeError: age must be an integer
 
 >>> a = BaseGeometry()
 >>> a.area()
-area() is not implemented
+Traceback (most recent call last):
+Exception: area() is not implemented
