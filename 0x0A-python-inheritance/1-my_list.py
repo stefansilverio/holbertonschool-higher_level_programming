@@ -11,6 +11,6 @@ class MyList(list):
     prints list
     """
     def print_sorted(self):
-        self = self.copy()
-        self.sort()
-        print(self)
+        i_copy = self.copy()
+        i_copy.sort()
+        print(i_copy)
