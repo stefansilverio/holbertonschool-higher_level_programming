@@ -23,7 +23,7 @@ def pascal_triangle(n):
     if (n >= 2):
         big_list.append([1, 1])
 
-    for i in range(n):
+    for i in range(2, n):
         for elem in range(len(sub_list) - 1):
             curr.insert(1, sub_list[elem] + sub_list[elem + 1])
         sub_list = curr
