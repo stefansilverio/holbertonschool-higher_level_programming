@@ -1,29 +1,32 @@
 #!/usr/bin/python3
 """
-this function builds
-pascals triangl
-Return: list of lists
+create pascals triangle
+Return:
+Implementation of pascals triangle
 """
 
 
 def pascal_triangle(n):
     """
-    Return: list of lists
+    build pascal's triangle
     """
-    sub_list = []
     big_list = []
-    num = 11
-    ex = 0
+    curr = [1, 1]
+    sub_list = [1, 1]
 
     if (n <= 0):
         return big_list
 
+    if (n >= 1):
+        big_list.append([1])
+
+    if (n >= 2):
+        big_list.append([1, 1])
+
     for i in range(n):
-        result = 11**ex
-        string = str(result)
-        ex += 1
-        for c in string:
-            sub_list.append(c)
+        for elem in range(len(sub_list) - 1):
+            curr.insert(1, sub_list[elem] + sub_list[elem + 1])
+        sub_list = curr
+        curr = [1, 1]
         big_list.append(sub_list)
-        sub_list = []
     return big_list
