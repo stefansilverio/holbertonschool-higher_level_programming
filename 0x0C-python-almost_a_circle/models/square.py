@@ -32,25 +32,36 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """update dict"""
-        if (len(args) is False):
-            for k, v in kwargs.items():
-                if k == "id":
-                    self.__dict__[k] = v
-                elif k == "size":
+        if (len(args) is 0):
+            if (len(kwargs) is 0):
+                raise TypeError("missing 2 required positional arguments: \
+                'width' and 'height")
+            for (k, v) in kwargs.items():
+                if (k is 'id'):
+                    self.id = v
+                if (k is 'size'):
                     self.width = v
-                else:
-                    self.__dict__['_Rectangle__{}'.format(k)] = v
+                    self.height = v
+                if (k is 'x'):
+                    self.x = v
+                if (k is 'y'):
+                    self.y = v
 
         else:
-            l = ['size', 'x', 'y']
+            length = len(args)
             idx = 0
-            bound = len(args)
-            if bound > 1:
-                self.width = args[1]
-            self.__dict__['id'] = args[0]
-            for elem in range(1, bound):
-                self.__dict__['_Rectangle__{}'.format(l[idx])] = args[elem]
+            if (length > idx):
+                self.id = args[0]
                 idx += 1
+            if (length > idx):
+                self.width = args[1]
+                self.height = args[1]
+                idx += 1
+            if (length > idx):
+                self.x = args[2]
+                idx += 1
+            if (length > idx):
+                self.y = args[3]
 
     def to_dictionary(self):
         new = {}
