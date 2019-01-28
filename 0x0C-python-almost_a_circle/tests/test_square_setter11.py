@@ -4,7 +4,7 @@ Set square size
 """
 import unittest
 from models.base import Base
-from models.rectangles import Rectangle
+from models.rectangle import Rectangle
 from models.square import Square
 
 class TestBaseClass(unittest.TestCase):
@@ -15,3 +15,5 @@ class TestBaseClass(unittest.TestCase):
         self.assertEqual(str(s1.size), "5")
         s1.size = 10
         self.assertEqual(str(s1), "[Square] (1) 0/0 - 10")
+        self.assertEqual(s1.size, s1.width)
+        self.assertEqual(s1.size, s1.height)
