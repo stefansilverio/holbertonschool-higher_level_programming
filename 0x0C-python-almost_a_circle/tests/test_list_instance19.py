@@ -3,7 +3,7 @@
 import unittest
 from models.base import Base
 from models.square import Square
-from models.Rectangle import Square
+from models.Rectangle import Rectangle
 
 class test_e(self):
     def test_e(self):
@@ -34,10 +34,10 @@ class test_e(self):
 
     list_squares_output = Square.load_from_file()
 
-    for square in list_squares_input:
-        print("[{}] {}".format(id(square), square))
+    input = ["[Square] (5) 0/0 - 5", "[Square] (6) 9/1 - 7"]
+    self.assertSequenceEqual(list_squares_input, input)
 
     print("---")
 
-    for square in list_squares_output:
-        print("[{}] {}".format(id(square), square))
+    output = ["[Square] (5) 0/0 - 5", "[Square] (6) 9/1 - 7"]
+    self.assertSequenceEqual(list_squares_output, output)

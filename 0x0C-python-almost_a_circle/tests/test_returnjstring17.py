@@ -13,4 +13,6 @@ class TestBaseClass(unittest.TestCase):
         ]
         json_list_input = Rectangle.to_json_string(list_input)
         list_output = Rectangle.from_json_string(json_list_input)
-        self.assertEqual(str("[{}] {}".format(type(list_input), list_input)), str([<class 'list'>] [{'height': 4, 'width': 10, 'id': 89}, {'height': 7, 'width': 1, 'id': 7}])
+        self.assertEqual(str("[{}] {}".format(type(list_input), list_input)), "[<class 'list'>] [{'height': 4, 'width': 10, 'id': 89}, {'height': 7, 'width': 1, 'id': 7}]")
+        self.assertEqual(str("[{}] {}".format(type(json_list_input), json_list_input)), "[<class 'str'>]" '[{"height": 4, "width": 10, "id": 89}, {"height": 7, "width": 1, "id": 7}]')
+        self.assertEqual(str("[{}] {}".format(type(list_output), list_output)), "[<class 'list'>] [{'height': 4, 'width': 10, 'id': 89}, {'height': 7, 'width': 1, 'id': 7}]")
