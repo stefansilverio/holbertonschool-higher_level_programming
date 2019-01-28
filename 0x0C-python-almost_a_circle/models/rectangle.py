@@ -100,20 +100,38 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """update rectangle"""
-        if (len(args) is False):
-            for k, v in kwargs.items():
-                if k == "id":
-                    self.__dict__[k] = v
-                self.__dict__['_Rectangle__{}'.format(k)] = v
-
+        if (len(args) is 0):
+            if (len(kwargs) is 0):
+                raise TypeError("missing 2 required positional arguments: \
+                'width' and 'height'")
+            for (k, v) in kwargs.items():
+                if (k is 'id'):
+                    self.id = v
+                if (k is 'width'):
+                    self.width = v
+                if (k is 'height'):
+                    self.height = v
+                if (k is 'x'):
+                    self.x = v
+                if (k is 'y'):
+                    self.y = v
         else:
-            l = ['width', 'height', 'x', 'y']
-            bound = len(args)
+            length = len(args)
             idx = 0
-            self.__dict__['id'] = args[0]
-            for elem in range(1, bound):
-                self.__dict__['_Rectangle__{}'.format(l[idx])] = args[elem]
+            if (length > idx):
+                self.id = args[0]
                 idx += 1
+            if (length > idx):
+                self.width = args[1]
+                idx += 1
+            if (length > idx):
+                self.height = args[2]
+                idx += 1
+            if (length > idx):
+                self.x = args[3]
+                idx += 1
+            if (length > idx):
+                self.y = args[4]
 
     def to_dictionary(self):
         new = {}
