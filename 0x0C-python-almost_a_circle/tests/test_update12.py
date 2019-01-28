@@ -6,6 +6,7 @@ import unittest
 from models.base import Base
 from models.square import Square
 
+
 class TestBaseClass(unittest.TestCase):
     def test_e(self):
             s1 = Square(5)
