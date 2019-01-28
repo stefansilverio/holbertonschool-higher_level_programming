@@ -11,6 +11,7 @@ This project in higher-level programming is about:
 * Using super() to call methods from parent class
 * Using multiple inheritance
 * Updating object values using __dict__
+* Implementing unittests in a large project
 
 ---
 File|Task
