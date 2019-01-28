@@ -5,6 +5,7 @@ Unittest for base class
 import unittest
 from models.base import Base
 
+
 class TestBaseClass(unittest.TestCase):
 
     def test_e(self):
@@ -20,6 +21,7 @@ class TestBaseClass(unittest.TestCase):
         self.assertEqual(3, b5.id)
         b6 = Base("cat")
         self.assertEqual("cat", b6.id)
-        with self.assertRaises(ValueError) as cm:
+        with self.assertRaises(TypeError) as cm:
             b7 = Base(1, 2)
-        self.assertEqual("TypeError: __init__() takes from 1 to 2 positional arguments but 3 were given", b7.id)
+        self.assertEqual("__init__() takes from 1 to 2 \
+positional arguments but 3 were given", str(cm.exception))
