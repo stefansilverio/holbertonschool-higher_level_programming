@@ -6,6 +6,7 @@ Returns: Square
 """
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """
     Square inherits from rectangle
@@ -26,11 +27,12 @@ class Square(Rectangle):
 
     def __str__(self):
         """override print fn"""
-        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width))
+        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                  self.width))
 
     def update(self, *args, **kwargs):
         """update dict"""
-        if (len(args) == False):
+        if (len(args) is False):
             for k, v in kwargs.items():
                 if k == "id":
                     self.__dict__[k] = v
@@ -40,7 +42,7 @@ class Square(Rectangle):
                     self.__dict__['_Rectangle__{}'.format(k)] = v
 
         else:
-            l = ['size','x', 'y']
+            l = ['size', 'x', 'y']
             idx = 0
             bound = len(args)
             if bound > 1:
