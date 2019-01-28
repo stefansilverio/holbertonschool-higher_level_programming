@@ -6,11 +6,12 @@ Build rectangl
 """
 from models.base import Base
 
+
 class Rectangle(Base):
     """
     base class for project
     """
-    def __init__(self, width, height, x = 0, y = 0, id=None):
+    def __init__(self, width, height, x=0, y=0, id=None):
         """
         build rectangle
         """
@@ -19,7 +20,6 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-
 
     @property
     def width(self):
@@ -94,11 +94,13 @@ class Rectangle(Base):
 
     def __str__(self):
         """customize print fn"""
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
+                                                        self.y, self.width,
+                                                        self.height))
 
     def update(self, *args, **kwargs):
         """update rectangle"""
-        if (len(args) == False):
+        if (len(args) is False):
             for k, v in kwargs.items():
                 if k == "id":
                     self.__dict__[k] = v
