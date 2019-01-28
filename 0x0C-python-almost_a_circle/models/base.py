@@ -2,6 +2,7 @@
 
 import json
 
+
 class Base:
     """base class for project"""
     __nb_objects = 0
@@ -17,7 +18,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """convert to json obj"""
-        if (len(list_dictionaries) == False or list_dictionaries == None):
+        if (len(list_dictionaries) is False or list_dictionaries is None):
             return "[]"
         else:
             json_str = json.dumps(list_dictionaries)
@@ -25,13 +26,13 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        if (len(json_string) == 0 or json_string == None):
+        if (len(json_string) == 0 or json_string is None):
             return []
         return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        if (list_objs == None):
+        if (list_objs is None):
             with open("{}.json".format(cls.__name__), "w") as f:
                 f.write(to_json_string([]))
         else:
@@ -54,10 +55,10 @@ class Base:
     def load_from_file(cls):
         new = []
         try:
-           with open("{}.json".format(cls.__name__), "r") as f:
-               dic = Base.from_json_string(f.read())
-               for i in dic:
-                   new.append(cls.create(**i))
-               return new
+            with open("{}.json".format(cls.__name__), "r") as f:
+                dic = Base.from_json_string(f.read())
+                for i in dic:
+                    new.append(cls.create(**i))
+                return new
         except Exception:
             return []
