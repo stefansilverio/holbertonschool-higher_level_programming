@@ -12,6 +12,7 @@ class Square(Rectangle):
     Square inherits from rectangle
     """
     def __init__(self, size, x=0, y=0, id=None):
+        """create square obj"""
         super().__init__(size, size, x, y, id)
 
     @property
@@ -64,6 +65,7 @@ class Square(Rectangle):
                 self.y = args[3]
 
     def to_dictionary(self):
+        """convert obj to dict"""
         new = {}
         new['id'] = self.id
         new['size'] = self.width

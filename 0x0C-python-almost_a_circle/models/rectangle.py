@@ -134,6 +134,7 @@ class Rectangle(Base):
                 self.y = args[4]
 
     def to_dictionary(self):
+        """return dict representation"""
         new = {}
         new['x'] = self.x
         new['y'] = self.y

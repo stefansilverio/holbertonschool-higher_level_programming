@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-
+"""base class"""
 import json
 
 
 class Base:
-    """base class for project"""
+    """base class for project
+    all other shapes are built
+    on this class
+    return: 0
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -17,7 +21,9 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """convert to json obj"""
+        """convert to json obj
+        Return: dict
+        """
         if (len(list_dictionaries) is False or list_dictionaries is None):
             return "[]"
         else:
@@ -26,12 +32,15 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """creates dictionaries
+        """
         if (len(json_string) == 0 or json_string is None):
             return []
         return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """save json file"""
         if (list_objs is None):
             with open("{}.json".format(cls.__name__), "w") as f:
                 f.write(to_json_string([]))
@@ -44,6 +53,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """creates new instance from dict"""
         if (cls.__name__ == "Square"):
             dum = cls(4, 4, 4, 4)
         if (cls.__name__ == "Rectangle"):
@@ -53,6 +63,8 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """load json file
+        create instances"""
         new = []
         try:
             with open("{}.json".format(cls.__name__), "r") as f:
