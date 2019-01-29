@@ -29,9 +29,12 @@ positional arguments but 3 were given", str(cm.exception))
         r1 = Rectangle(10, 7, 2, 8)
         dictionary = r1.to_dictionary()
         json_dictionary = Base.to_json_string([dictionary])
-        self.assertEqual(str(dictionary), "{'x': 2, 'width':\
-10, 'id': 1, 'height': 7, 'y': 8}")
-        self.assertEqual((type(dictionary)), "<class 'dict'>")
+        self.assertEqual(print(json_dictionary), [{"x": 2, "width":
+                                                   10, "id": 1, "height": 7,
+                                                   "y": 8}])
+        self.assertEqual((type(json_dictionary)), "<class 'str'>")
+        json_dictionary = Base.to_json_string([])
+        self.asserEqual(print(json_dictionary), "[]")
 
 #  #16
     def test_eq(self):
