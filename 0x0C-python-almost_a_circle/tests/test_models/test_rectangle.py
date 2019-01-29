@@ -8,7 +8,7 @@ from contextlib import redirect_stdout
 
 
 class TestBaseClass(unittest.TestCase):
-    def test_e(self):
+    def test_inher(self):
         #  #2
         r0 = Rectangle(2, 5)
         self.assertEqual(issubclass(Rectangle, Base), True)
@@ -56,7 +56,7 @@ arguments but 7 were given", str(cm.exception))
         self.assertEqual(r8.id, "almond")
 
 #  #3
-    def test_eq(self):
+    def test_val(self):
         with self.assertRaises(TypeError) as cm:
             r1 = Rectangle("10", 2)
         self.assertEqual('width must be an integer', str(cm.exception))
@@ -91,7 +91,7 @@ arguments: 'width' and 'height'", str(cm.exception))
 argument: 'height'", str(cm.exception))
 
 #  #4
-    def test_equ(self):
+    def test_area(self):
         r1 = Rectangle(5, 5)
         self.assertEqual(r1.area(), 25)
         r2 = Rectangle(3, 2)
@@ -106,7 +106,7 @@ argument: 'height'", str(cm.exception))
 'height'", str(cm.exception))
 
 #  #5
-    def test_equa(self):
+    def test_disp0(self):
         r1 = Rectangle(4, 6)
         f = io.StringIO()
         with redirect_stdout(f):
@@ -120,7 +120,7 @@ argument: 'height'", str(cm.exception))
         self.assertEqual(f.getvalue(), "##\n##\n")
 
 #  #6
-    def test_equal(self):
+    def test_str(self):
         r1 = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(str(r1), '[Rectangle] (12) 2/1 - 4/6')
         r2 = Rectangle(5, 5, 1)
@@ -139,7 +139,7 @@ argument: 'height'", str(cm.exception))
 arguments: 'width' and 'height'", str(cm.exception))
 
 #  #7
-    def test_equals(self):
+    def test_disp1(self):
         r1 = Rectangle(2, 3, 2, 2)
         f = io.StringIO()
         with redirect_stdout(f):

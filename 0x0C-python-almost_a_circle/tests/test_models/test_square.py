@@ -11,7 +11,7 @@ from contextlib import redirect_stdout
 
 class TestBaseClass(unittest.TestCase):
     #  10
-    def test_e(self):
+    def test_in(self):
         s1 = Square(5)
         self.assertEqual(str(s1), "[Square] (1) 0/0 - 5")
         self.assertEqual(s1.area(), 25)
@@ -39,7 +39,7 @@ class TestBaseClass(unittest.TestCase):
         self.assertEqual(issubclass(Square, Rectangle), True)
 
 #  #11
-    def test_eq(self):
+    def test_size(self):
         s1 = Square(5)
         self.assertEqual(str(s1), "[Square] (1) 0/0 - 5")
         self.assertEqual(str(s1.size), "5")
@@ -49,7 +49,7 @@ class TestBaseClass(unittest.TestCase):
         self.assertEqual(s1.size, s1.height)
 
 #  #12
-    def test_equ(self):
+    def test_up(self):
         s1 = Square(5)
         self.assertEqual(str(s1), "[Square] (1) 0/0 - 5")
         s1.update(10)
@@ -73,7 +73,7 @@ class TestBaseClass(unittest.TestCase):
         self.assertEqual(str(cm.exception), "width must be an integer")
 
 #  #13
-    def equa(self):
+    def test_dict(self):
         r1 = Rectangle(10, 2, 1, 9)
         r1_dictionary = r1.to_dictionary()
         self.assertEqual(isinstance(r1_dictionary, dict), True)
@@ -86,7 +86,7 @@ class TestBaseClass(unittest.TestCase):
         self.assertEqual(str(r1 == r2), "False")
 
 #  #14
-    def equal(self):
+    def test_di(self):
         s1 = Square(10, 2, 1)
         s1_dictionary = s1.to_dictionary()
         self.assertEqual(str(s1_dictionary), "{'id': 1, 'x': 2,\
