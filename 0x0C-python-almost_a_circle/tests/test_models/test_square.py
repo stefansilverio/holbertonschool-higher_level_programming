@@ -8,10 +8,11 @@ import unittest
 import io
 from contextlib import redirect_stdout
 
+
 class TestBaseClass(unittest.TestCase):
-#  10
+    #  10
     def test_e(self):
-         s1 = Square(5)
+        s1 = Square(5)
         self.assertEqual(str(s1), "[Square] (1) 0/0 - 5")
         self.assertEqual(s1.area(), 25)
         f = io.StringIO()

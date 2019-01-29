@@ -9,7 +9,7 @@ from contextlib import redirect_stdout
 
 class TestBaseClass(unittest.TestCase):
     def test_e(self):
-#  #2
+        #  #2
         r0 = Rectangle(2, 5)
         self.assertEqual(issubclass(Rectangle, Base), True)
         r1 = Rectangle(10, 2, 4, 6)
