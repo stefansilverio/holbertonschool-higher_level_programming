@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """base class"""
 import json
+import csv
 
 
 class Base:
@@ -55,9 +56,9 @@ class Base:
     def create(cls, **dictionary):
         """creates new instance from dict"""
         if (cls.__name__ == "Square"):
-            dum = cls(4, 4, 4, 4)
+            dum = cls(4)
         if (cls.__name__ == "Rectangle"):
-            dum = cls(4, 4, 4, 4, 4)
+            dum = cls(4, 4)
         dum.update(**dictionary)
         return dum
 
@@ -74,3 +75,17 @@ class Base:
                 return new
         except Exception:
             return []
+
+        @classmethod
+        def save_to_file_csv(cls, list_objs):
+            """save csv file"""
+            if (list_objs is None):
+                with open("{}.csv".format(cls.__name__), "w") as f:
+                    writer = csv.writer(f)
+                    # write empty list to file in csv
+            else:
+                new = []
+                with open("{}.csv".format(cls.__name__), "w") as f:
+                    for obj in list_objs:
+                        new.append(obj.to_dictionary())
+                    f.write(Base.to_json_string(new))
