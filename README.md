@@ -2,25 +2,15 @@
 ---
 ## Description
 
-This series in lower-level programming is about:
+This series in higher level programming is about:
 * Conditionals
-* Loops
-* Pointers
-* Arrays
-* Strings
-* Recursion
-* Static Libraries
-* Memory Management
-* Command Line Arguments
-* Structures
-* Function Pointers
-* Variadic Functions
-* Linked Lists
-* Bit Manipulation
-* File I/0
-* Dynamic Libraries
-* Stacks and Queues
-* Hash Tables
+* Importing Modules
+* Data Structures
+* Handling Exceptions
+* Classes
+* Test Driven Development
+* Inheritance
+* Object Behavior
 
 ## Author
 `stefan silverio`
