@@ -11,6 +11,9 @@ if __name__ == '__main__':
     c.execute("""SELECT * FROM states WHERE `name` = '{}' ORDER
     BY `states`.`id` ASC""".format(sys.argv[4]))
     states = c.fetchall()
+    if states is None:
+        c.close()
+        db.close()
     for state in states:
         print(state)
     c.close()
