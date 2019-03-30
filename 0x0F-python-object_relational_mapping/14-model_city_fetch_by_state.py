@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """print all city obj's from hbtn_0e_14_usa"""
 from model_state import Base, State
-from model_city import Base, City
+from model_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import sqlalchemy
