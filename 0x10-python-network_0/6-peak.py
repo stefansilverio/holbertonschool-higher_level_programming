@@ -3,7 +3,7 @@
 
 
 def find_peak(list_of_integers):
-    if isinstance(list_of_integers, list) is false:
+    if isinstance(list_of_integers, list) is False:
         return None
     if list_of_integers is None or len(list_of_integers) is 0:
         return None
