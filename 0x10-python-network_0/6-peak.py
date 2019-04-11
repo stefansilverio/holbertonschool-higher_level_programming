@@ -15,12 +15,12 @@ def find_peak(list_of_integers):
         if list_of_integers[mid - 1] <= list_of_integers[mid]:
             return list_of_integers[mid]
         return list_of_integers[mid - 1]
-    if list_of_integers[mid - 1] > list_of_integers[mid] and\
-       list_of_integers[mid + 1] > list_of_integers[mid]:
+    if list_of_integers[mid - 1] < list_of_integers[mid] and\
+       list_of_integers[mid + 1] < list_of_integers[mid]:
         return list_of_integers[mid]
     if list_of_integers[mid - 1] > list_of_integers[mid]:
         left_list = []
-        left_list = list_of_integers[:mid + 1]
+        left_list = list_of_integers[:mid]
         return find_peak(left_list)
     else:
         right_list = []
