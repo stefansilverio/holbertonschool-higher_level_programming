@@ -2,7 +2,6 @@
 # send search request to Star Wars API
 import requests
 import sys
-import pprint
 if __name__ == "__main__":
     search = sys.argv[1]
     r = requests.get('https://swapi.co/api/people', {'search': search})
