@@ -11,7 +11,7 @@ if __name__ == "__main__":
     if len(r.json()) > 0 and type(r.json()) is dict:
         r = r.json()
         print("{} {}".format([r.get('id')], r.get('name')))
-    elif type(r.json()) is not dict:
-        print("Not a valid JSON")
-    else:
+    elif len(r.json()) is 0:
         print("No result")
+    else:
+        print("Not a valid JSON")
