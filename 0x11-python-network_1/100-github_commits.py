@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """print 10 most recent commits"""
 import requests
-import pprint
 from sys import argv
 if __name__ == "__main__":
     me = argv[2] + "/" + argv[1]
