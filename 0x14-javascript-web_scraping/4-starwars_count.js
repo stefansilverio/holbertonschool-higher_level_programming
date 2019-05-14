@@ -3,7 +3,7 @@
 const request = require('request');
 
 const options = {
-  url: 'http://swapi.co/api/films',
+  url: process.argv[2],
   method: 'GET',
   headers: {
     'Accept-Charset': 'utf-8',
@@ -12,15 +12,15 @@ const options = {
 };
 
 request(options, function (err, res, body) {
-  if (err) { console.log(err); }
-
-  let cnt = 0;
-  let idx = 0;
   let json = JSON.parse(body);
-  let test = '18';
-  for (; idx < json['results'].length; idx++) {
-    let str = json['results'][idx]['characters'] + ',';
-    if (str.indexOf(test) >= 0) { cnt++; }
+  if (err) { console.log(err); } else {
+    let cnt = 0;
+    let idx = 0;
+    let test = '18';
+    for (; idx < json['results'].length; idx++) {
+      let str = json['results'][idx]['characters'] + ',';
+      if (str.indexOf(test) >= 0) { cnt++; }
+    }
+    console.log(cnt);
   }
-  console.log(cnt);
 });
