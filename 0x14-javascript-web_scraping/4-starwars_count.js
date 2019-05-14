@@ -12,7 +12,7 @@ const options = {
 };
 
 request(options, function (err, res, body) {
-  if (err) { console.log('Problem reaching URL: ', err); }
+  if (err) { console.log(err); }
 
   let cnt = 0;
   let idx = 0;
