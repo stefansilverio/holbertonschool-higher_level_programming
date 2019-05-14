@@ -23,6 +23,10 @@ request(options, function (err, res, body) {
         dict[id] += 1;
       }
     });
+    const keys = Object.keys(dict);
+    for (const key of keys) {
+      if (dict[key] === 0) { delete dict[key]; }
+    }
     console.log(dict);
   }
 });
